@@ -31,7 +31,7 @@ arr.find(n=>n==='a') //"a"
 
 arr.findIndex(n=>n==='a') //6
 
-关于find() 和some()
+关于find()
 如果没有符合条件的成员，find返回undefined,some返回false
 查找数组对象中的一个元素是否纯在：
 const arr = [{'name':'Tom', 'age': 18},{'name':'marry', 'age': 15}]
@@ -43,3 +43,29 @@ arr.find((element,index,array)=>{
 })
 
 参数是一个callback,callback有三个参数，[当前遍历对象,下标,遍历的数组]，some()方法类似
+
+
+接着补充ES6-some( ) 和 every( )方法的讲解: 
+
+    //every()
+    let numbers = [2, 4, 10, 4, 8];
+    let a = numbers.every((item,index)=>{
+        if(item%2===0){
+            return true;
+        }else{
+            return false;
+        }
+    });
+    console.log(a)
+
+    //some()
+    let b=numbers.some((item,index)=>{
+         if(item%3===0){
+            return true;
+        }else{
+            return false;
+        }
+    })
+    console.log(b)
+
+some 英语翻译为一些,every翻译为所有,每个，所以some方法 只要其中一个为true 就会返回true的，相反，every（）方法必须所有都返回true才会返回true，哪怕有一个false，就会返回false；every（）和 some（）目的：确定数组的所有成员是否满足指定的测试
