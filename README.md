@@ -30,3 +30,16 @@ arr.find(n=>n==='a') //"a"
 数组实例的 findIndex 方法的用法与 find 方法非常类似，返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。
 
 arr.findIndex(n=>n==='a') //6
+
+关于find() 和some()
+如果没有符合条件的成员，find返回undefined,some返回false
+查找数组对象中的一个元素是否纯在：
+const arr = [{'name':'Tom', 'age': 18},{'name':'marry', 'age': 15}]
+arr.find((element,index,array)=>{
+  if(element.name==='Tom'){
+    console.log(array[index]);
+    return ture;
+  }
+})
+
+参数是一个callback,callback有三个参数，[当前遍历对象,下标,遍历的数组]，some()方法类似
