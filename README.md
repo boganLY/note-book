@@ -5,9 +5,9 @@ Organiza a little knowledge
 如果一个对象的所有键名都是正整数或零，并且有 length 属性，那么这个对象就很像数组，称为伪数组。典型的伪数组有函数的 arguments 对象，以及大多数 DOM 元素集，还有字符串。
   <pre>
     // html
-      <button>测试1</button>
-      <button>测试2</button>
-      <button>测试3</button>
+      &lt;button&le;测试1&lt;/button&le;
+      &lt;button&le;测试2&lt;/button&le;
+      &lt;button&le;测试3&lt;/button&le;
     // js
     let btns = document.getElementsByTagName("button")
     console.log("btns",btns);//得到一个伪数组
