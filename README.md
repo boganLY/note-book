@@ -3,21 +3,16 @@ Organiza a little knowledge
 
 1. Array.from() : 将伪数组对象或可遍历对象转换为真数组
 如果一个对象的所有键名都是正整数或零，并且有 length 属性，那么这个对象就很像数组，称为伪数组。典型的伪数组有函数的 arguments 对象，以及大多数 DOM 元素集，还有字符串。
-
+  <pre>
     // html
-    <pre>
       <button>测试1</button>
-      <br>
       <button>测试2</button>
-      <br>
       <button>测试3</button>
-      <br>
-    </pre>
     // js
     let btns = document.getElementsByTagName("button")
     console.log("btns",btns);//得到一个伪数组
     btns.forEach(item=>console.log(item)) Uncaught TypeError: btns.forEach is not a function
-    
+  </pre>  
 
 针对伪数组，没有数组一般方法，直接遍历便会出错,ES6 新增 Array.from()方法来提供一种明确清晰的方式以解决这方面的需求。
 Array.from(btns).forEach(item=>console.log(item))将伪数组转换为数组
