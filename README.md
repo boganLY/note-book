@@ -53,7 +53,7 @@ Array.from(btns).forEach(item=>console.log(item))将伪数组转换为数组
             return false;
         }
     });
-    console.log(a)
+    console.log(a)  //true
 
     //some()
     let b=numbers.some((item,index)=>{
@@ -63,6 +63,6 @@ Array.from(btns).forEach(item=>console.log(item))将伪数组转换为数组
             return false;
         }
     })
-    console.log(b)
+    console.log(b)  //false
 
 some 英语翻译为一些,every翻译为所有,每个，所以some方法 只要其中一个为true 就会返回true的，相反，every（）方法必须所有都返回true才会返回true，哪怕有一个false，就会返回false；every（）和 some（）目的：确定数组的所有成员是否满足指定的测试
